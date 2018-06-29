@@ -1,0 +1,30 @@
+{
+  "name": "gps_coordinates",
+  "version": "1.0.0",
+  "description": "mlab express node and react",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davideliason/GPS_Coordinates.git"
+  },
+  "keywords": [
+    "react",
+    "express"
+  ],
+  "author": "David Eliason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davideliason/GPS_Coordinates/issues"
+  },
+  "homepage": "https://github.com/davideliason/GPS_Coordinates#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
