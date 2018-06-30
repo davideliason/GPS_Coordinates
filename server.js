@@ -1,9 +1,11 @@
 const express = require('express')
-var path = require('path');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
+const path = require('path');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const infoController = require('./controllers/InfoController');
+
 
 // db instance connection
 require("./config/db");
@@ -16,18 +18,31 @@ app.use(bodyParser.json());
 
 app.get('/', (req, res) => res.send('Hello World! :)'))
 
-app.get('/users', function (req, res, next) {
+// more API Endpoints
+
+app
+    .route("/infos")
+    .get(infoController.listAllInfos)
+    .post(infoController.createNewInfo);
+
+app
+    .route("/infos/:taskid")
+    .get(infoController.readInfo)
+    .put(infoController.updateInfo)
+    .delete(infoController.deleteInfo);
+
+app.get('/infos', function (req, res, next) {
     // res.send('sample works');  simple response
     res.json([{
-        id: 1,
-        username: "john",
-        latitude: "here",
-        longitude: "there"
+        infoName: "john",
+        createdOn: "today",
+        infoLatitude: "here",
+        infoLongitude: "there"
     }, {
-        id: 2,
-        username: "bob",
-        latitude: "beach",
-        longitude: "beachtowel"
+        infoName: "bob",
+        createdOn: "tomorrow",
+        infoLatitude: "beach",
+        infoLongitude: "beachtowel"
     }]);
 });
 

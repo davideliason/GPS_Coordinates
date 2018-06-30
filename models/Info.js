@@ -7,8 +7,8 @@ const InfoSchema = new Schema({
         required: true
     },
     createdOn: {
-        type: Date,
-        default: Date.now
+        type: String,
+        required: true
     },
     infoLatitude: {
         type: String,
