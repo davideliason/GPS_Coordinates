@@ -1,8 +1,8 @@
 {
   "name": "gps_coordinates",
   "version": "1.0.0",
-  "description": "mlab express node and react",
-  "main": "index.js",
+  "description": "atlas mongodDB express node and react",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"

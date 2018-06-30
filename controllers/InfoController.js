@@ -11,6 +11,7 @@ exports.listAllInfos = (req, res) => {
 
 exports.createNewInfo = (req, res) => {
     let newInfo = new Info(req.body);
+    console.log(req.body);
     newInfo.save((err, info) => {
         if (err) {
             res.status(500).send(err);
@@ -33,7 +34,7 @@ exports.updateInfo = (req, res) => {
         { _id: req.params.infoid },
         req.body,
         { new: true },
-        (err, task) => {
+        (err, info) => {
             if (err) {
                 res.status(500).send(err);
             }

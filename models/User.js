@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const InfoSchema = new Schema({
-    infoName: {
+const UserSchema = new Schema({
+    userName: {
         type: String,
         required: true
     },
@@ -10,14 +10,14 @@ const InfoSchema = new Schema({
         type: String,
         required: true
     },
-    infoLatitude: {
+    userLatitude: {
         type: String,
         required: true
     },
-    infoLongitude: {
+    userLongitude: {
         type: String,
         required: true
     }
 });
 
-module.exports = mongoose.model("Infos", InfoSchema);
+module.exports = mongoose.model("Users", UserSchema);

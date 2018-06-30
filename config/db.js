@@ -19,4 +19,4 @@ mongoose.connect(dbURI, options).then(
 
 // require any models
 
-require("../models/Info");
+require("../models/User");
