@@ -8,7 +8,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-const app = express()
+const app = express();
+const port = process.env.PORT || 3301;
 
 app.get('/', (req, res) => res.send('Hello World! :)'))
 
@@ -27,4 +28,4 @@ app.get('/users', function (req, res, next) {
     }]);
 });
 
-app.listen(3001, () => console.log('Example app listening on port 3000!'))
+app.listen(port, () => console.log('Example app listening on port 3000!'))
