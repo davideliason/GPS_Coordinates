@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+function Person(props) {
+  return <p> Person: {props.user} + lat: {props.latitude}</p>
+}
+
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -21,7 +26,7 @@ class App extends Component {
       <div className="App">
         <h1>Users</h1>
         {this.state.users.map(user =>
-          <div key={user.id}>{user.username} at {user.latitude}</div>
+          <Person user={user.username} latitude={user.latitude} />
         )}
       </div>
     );
