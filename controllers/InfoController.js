@@ -41,3 +41,12 @@ exports.updateInfo = (req, res) => {
         }
     );
 };
+
+exports.deleteInfo = (req, res) => {
+    Info.remove({ _id: req.params.infoid }, (err, info) => {
+        if (err) {
+            res.status(404).send(err);
+        }
+        res.status(200).json({ message: "Info successfully deleted" });
+    });
+};
