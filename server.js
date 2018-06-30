@@ -13,10 +13,10 @@ require("./config/db");
 const app = express();
 const port = process.env.PORT || 3301;
 
+// parse HTTP request before routes, grab req.body
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => res.send('Hello World! :)'))
 
 // more API Endpoints
 
