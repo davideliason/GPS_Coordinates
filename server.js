@@ -2,6 +2,8 @@ var express = require('express');
 var morgan = require('morgan');
 var helmet = require('helmet');
 var wiki = require('./wiki.js');
+var favicon = require('serve-favicon');
+var path = require('path');
 
 require('dotenv').config()
 // instantiate express
@@ -19,6 +21,7 @@ app.use(helmet());
 app.use(helmet.hidePoweredBy());
 app.use('/media', express.static('public'));
 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 // route with GET request
 app.get('/', (req, res) => {
