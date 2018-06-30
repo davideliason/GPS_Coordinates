@@ -5,10 +5,6 @@
 using MongoDB Atlas as cloud hosted DB, express on node.js, react/redux front-end
 
 ### Steps
-First, I created a simple Express server with a single route, sending an array with two objects of key-values pairs, sample data for a sample user, lat, longitude. That could be tested independently by starting up the server and a browser.
+This has been a real learning experience. Bottlenecks working at more abstract levels had me going back to basics, looking at node.js and express foundational levels and building upon that.
 
-Next, I created a CRA with the use of Fetch to grab the data from the server, set that to state, and then render that data using React component.
-
-Next, I worked on the DB side of things, creating a cluster on Atlas, and connecting it with the express server using a connection link that Atlas provides.
-
-An express app usually uses a MVC approach, and I followed that as well : the schema is the Model, the View is React, and the Controllers is a directory appropriately named.
+In doing so, I started with making sure that the express app was using security best practices by using helmet.js, using Snyk testing of modules, and being more aware of the issues as I move forward.

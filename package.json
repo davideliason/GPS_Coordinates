@@ -25,6 +25,7 @@
   "homepage": "https://github.com/davideliason/GPS_Coordinates#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "express-csurf": "^1.10.1",
     "helmet": "^3.12.1"
   },
   "devDependencies": {
