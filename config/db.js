@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const dbURI =
-    ""
+const dbURI = process.env.DB_URI;
 
 const options = {
     reconnectTries: Number.MAX_VALUE,
