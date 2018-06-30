@@ -1,12 +1,12 @@
-
-
-
 const express = require('express')
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+
+// db instance connection
+require("./config/db");
 
 const app = express();
 const port = process.env.PORT || 3301;

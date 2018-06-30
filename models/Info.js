@@ -13,7 +13,7 @@ const InfoSchema = new Schema({
     infoLatitude: {
         type: String,
         required: true
-    }
+    },
     infoLongitude: {
         type: String,
         required: true
