@@ -1,9 +1,9 @@
 
 const express = require("express");
 require('dotenv').config()
+require("./config/db");
 
 const app = express();
-
 const port = process.env.PORT || 3301;
 
 app.listen(port, () => {
