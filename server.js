@@ -8,6 +8,8 @@ require('dotenv').config()
 var app = express();
 var port = process.env.PORT || '3001';
 
+var test_variable = "port";
+
 // middleware
 // log request details
 app.use(morgan('dev'));
@@ -28,5 +30,5 @@ app.use('/wiki', wiki);
 
 
 app.listen(port, () => {
-    console.log("listening at port 3001");
+    console.log(`listening at ${test_variable} ${port}`);
 });
