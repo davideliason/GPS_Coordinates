@@ -18,3 +18,12 @@ exports.createNewInfo = (req, res) => {
         res.status(201).json(info);
     });
 };
+
+exports.readInfo = (req, body) => {
+    Info.findById(req.params.infoid, (err, info) => {
+        if (err) {
+            res.status(500).send(err);
+        }
+        res.status(200).json(info);
+    });
+};
