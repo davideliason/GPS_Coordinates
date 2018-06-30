@@ -7,6 +7,8 @@ require('dotenv').config()
 // instantiate express
 var app = express();
 var port = process.env.PORT || '3001';
+
+// middleware
 // log request details
 app.use(morgan('dev'));
 // help with security by setting HTTP headers
