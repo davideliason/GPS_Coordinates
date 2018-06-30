@@ -27,3 +27,17 @@ exports.readInfo = (req, body) => {
         res.status(200).json(info);
     });
 };
+
+exports.updateInfo = (req, res) => {
+    Info.findOneAndUpdate(
+        { _id: req.params.infoid },
+        req.body,
+        { new: true },
+        (err, task) => {
+            if (err) {
+                res.status(500).send(err);
+            }
+            res.status(200).json(info);
+        }
+    );
+};
