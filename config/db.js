@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const dbURI = "mongodb://GPS_Coordinates_Admin:opensesame@cluster0-shard-00-00-luwbw.mongodb.net:27017,cluster0-shard-00-01-luwbw.mongodb.net:27017,cluster0-shard-00-02-luwbw.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true";
+const dbURI = process.env.DB_URI;
 
 const options = {
     reconnectTries: Number.MAX_VALUE,
