@@ -12,7 +12,7 @@ const app = express()
 
 app.get('/', (req, res) => res.send('Hello World! :)'))
 
-app.get('/sample', function (req, res, next) {
+app.get('/users', function (req, res, next) {
     // res.send('sample works');  simple response
     res.json([{
         id: 1,
